@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ecommerce</string>
+    <string name="apparel_desc">Clothing from the top designer brands.</string>
+    <string name="apparel">Apparel</string>
+</resources>
