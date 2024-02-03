@@ -12,8 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ecommerce"
         tools:targetApi="31">
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.ecommerce.MainActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name="com.example.ecommerce.SignUp"
+            android:exported="true">
+        </activity>
+
+        <activity android:name="com.example.ecommerce.home_page"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

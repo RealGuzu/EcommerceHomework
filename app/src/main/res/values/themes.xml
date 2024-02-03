@@ -3,6 +3,13 @@
     <style name="Base.Theme.Ecommerce" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+<!--This is for enabling transitions        -->
+        <item name="android:windowActivityTransitions">true</item>
+<!--       This is for setting up enter and exit transition-->
+        <item name="android:windowEnterTransition">@transition/trans_anim</item>
+        <item name="android:windowExitTransition">@transition/trans_anim</item>
     </style>
 
     <style name="Theme.Ecommerce" parent="Base.Theme.Ecommerce" />

@@ -3,12 +3,12 @@ package com.example.ecommerce;
 public class item {
 
     String desc;
-    String cat;
+    String category;
     int image;
 
     public item(String desc, String cat, int image) {
         this.desc = desc;
-        this.cat = cat;
+        this.category = cat;
         this.image = image;
     }
 
@@ -21,11 +21,11 @@ public class item {
     }
 
     public String getCat() {
-        return cat;
+        return category;
     }
 
     public void setCat(String cat) {
-        this.cat = cat;
+        this.category = cat;
     }
 
     public int getImage() {

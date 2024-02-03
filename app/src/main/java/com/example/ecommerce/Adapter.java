@@ -15,8 +15,11 @@ public class Adapter extends RecyclerView.Adapter<viewHolder> {
     Context context;
         List<item> items;
 
+    public Context getContext() {
+        return context;
+    }
 
-        public Adapter(Context context, List<item> items) {
+    public Adapter(Context context, List<item> items) {
             this.context= context;
             this.items = items;
         }
@@ -24,7 +27,7 @@ public class Adapter extends RecyclerView.Adapter<viewHolder> {
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new viewHolder(LayoutInflater.from(context).inflate(R.id.card_view,parent,false));
+        return new viewHolder(LayoutInflater.from(context).inflate(R.layout.card_view,parent,false));
     }
 
     @Override
