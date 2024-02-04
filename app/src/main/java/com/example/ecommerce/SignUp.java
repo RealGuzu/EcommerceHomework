@@ -12,33 +12,39 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignUp extends Activity {
 
+    private FirebaseAuth auth;
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
-        TextView txt = findViewById(R.id.txtLogin);
-        Button btn = findViewById(R.id.btnSignUp);
+        auth = FirebaseAuth.getInstance();
+
+        TextView txtLogin = findViewById(R.id.txtLogin);
+        Button btnSignUp = findViewById(R.id.btnSignUp);
         EditText txtUser = findViewById(R.id.txtUser);
         EditText txtUsername = findViewById(R.id.txtUsername);
         EditText txtPassword = findViewById(R.id.txtPassword);
 
-        btn.setOnClickListener(v -> {
-            if (isFieldsEmpty(txtUser, txtUsername, txtPassword)) {
-                Toast.makeText(this, "Some fields are still empty", Toast.LENGTH_SHORT).show();
+        btnSignUp.setOnClickListener(v -> {
+            if (areFieldsEmpty(txtUser, txtUsername, txtPassword)) {
+                showToast("Some fields are still empty");
             } else {
-                openlogin();
+                signUpWithEmailAndPassword(txtUsername.getText().toString(), txtPassword.getText().toString());
             }
         });
 
-        txt.setOnClickListener(v -> openlogin());
+        txtLogin.setOnClickListener(v -> openLogin());
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(SignUp.this, R.color.black));
+        setStatusBarColor();
     }
 
-    private boolean isFieldsEmpty(EditText... editTexts) {
+    private boolean areFieldsEmpty(EditText... editTexts) {
         for (EditText editText : editTexts) {
             if (TextUtils.isEmpty(editText.getText().toString())) {
                 return true;
@@ -47,8 +53,27 @@ public class SignUp extends Activity {
         return false;
     }
 
-    private void openlogin() {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+    private void signUpWithEmailAndPassword(String email, String password) {
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        showToast("Registration successful");
+                        openLogin();
+                    } else {
+                        showToast("Registration failed: " + task.getException().getMessage());
+                    }
+                });
+    }
+
+    private void openLogin() {
+        startActivity(new Intent(this, Login.class));
+    }
+
+    private void setStatusBarColor() {
+        getWindow().setStatusBarColor(ContextCompat.getColor(SignUp.this, R.color.black));
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

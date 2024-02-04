@@ -35,7 +35,7 @@
         android:autofillHints="password"
         android:hint="@string/logPassword"
         android:minHeight="48dp"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPassword" />
     
     <Button
         android:id="@+id/btnLogin"

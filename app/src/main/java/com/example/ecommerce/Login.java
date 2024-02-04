@@ -3,37 +3,78 @@ package com.example.ecommerce;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-import org.w3c.dom.Text;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends Activity {
+
+    private FirebaseAuth auth;
+
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(Login.this,R.color.black));
+        initializeViews();
 
-        TextView txt = findViewById(R.id.btnLogin);
-        TextView txt2 = findViewById(R.id.orSignup);
+        auth = FirebaseAuth.getInstance();
 
+        TextView orSignupTextView = findViewById(R.id.orSignup);
+        Button loginButton = findViewById(R.id.btnLogin);
+        EditText emailEditText = findViewById(R.id.txtEmail);
+        EditText passwordEditText = findViewById(R.id.etxtPassword);
 
-        txt2.setOnClickListener(v -> openlogin());
-        txt.setOnClickListener(v -> openmain());
+        orSignupTextView.setOnClickListener(v -> openSignUp());
+        loginButton.setOnClickListener(v -> {
+            if (areFieldsEmpty(emailEditText, passwordEditText)) {
+                showToast("Some fields are still empty");
+            } else {
+                loginWithEmailAndPassword(emailEditText.getText().toString(), passwordEditText.getText().toString());
+            }
+        });
     }
 
-    public void openlogin() {
-        Intent intent = new Intent(this, SignUp.class);
-        startActivity(intent);
+    private void initializeViews() {
+        getWindow().setStatusBarColor(ContextCompat.getColor(Login.this, R.color.black));
     }
 
-    public void openmain (){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    private boolean areFieldsEmpty(EditText... editTexts) {
+        for (EditText editText : editTexts) {
+            if (editText.getText().toString().trim().isEmpty()) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    private void loginWithEmailAndPassword(String email, String password) {
+        auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        showToast("Login successful");
+                        openMain();
+                    } else {
+                        showToast("Login failed: " + task.getException().getMessage());
+                    }
+                });
+    }
+
+    private void openSignUp() {
+        startActivity(new Intent(this, SignUp.class));
+    }
+
+    private void openMain() {
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
