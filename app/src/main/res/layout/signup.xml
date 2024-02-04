@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/txtSign"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Sign Up"
         android:fontFamily="@font/hel"
         android:layout_centerHorizontal="true"
@@ -87,22 +87,20 @@
         android:shadowDy="1"
         android:shadowRadius="1"
         />
+
     <TextView
         android:id="@+id/txtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="login"
         android:layout_below="@+id/btnSignUp"
-        android:fontFamily="@font/hel"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25sp"
+        android:fontFamily="@font/hel"
         android:shadowColor="@color/text_shadow"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="1"
-        />
-
-
+        android:text="login" />
 
 
 </RelativeLayout>
