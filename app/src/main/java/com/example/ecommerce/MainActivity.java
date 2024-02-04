@@ -1,7 +1,6 @@
 package com.example.ecommerce;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.eREC);
 
-        List<item> items = new ArrayList<item>();
+        List<item> items = new ArrayList<>();
         items.add(new item("Clothing from the top designer brands","Apparel",R.drawable.clothing ));
         items.add(new item("Latest and Greatest devices from the top tech brands","Electronics",R.drawable.smartphone));
 
