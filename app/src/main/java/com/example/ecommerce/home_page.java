@@ -21,9 +21,12 @@ public class home_page  extends AppCompatActivity {
         setContentView(R.layout.home_page);
         Button btn = findViewById(R.id.btnEnter);
         TextView txt = findViewById(R.id.txtSignUp);
+        TextView txt2 = findViewById(R.id.txtLogin);
 
         txt.setOnClickListener(v -> opensignup());
         btn.setOnClickListener(v -> openactivitymain());
+
+
     }
 
     public void opensignup() {
@@ -32,10 +35,11 @@ public class home_page  extends AppCompatActivity {
     }
 
     public void openactivitymain(){
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,Login.class);
         startActivity(intent);
 
 
     }
+
 
 }

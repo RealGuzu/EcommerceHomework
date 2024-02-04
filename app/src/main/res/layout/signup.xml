@@ -22,6 +22,20 @@
         />
 
     <EditText
+        android:id="@+id/txtUser"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtUsername"
+        android:layout_centerHorizontal="true"
+        android:hint="Username"
+        android:autofillHints="username"
+        android:minHeight="48dp"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        />
+    <EditText
         android:id="@+id/txtUsername"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
@@ -62,17 +76,30 @@
         android:backgroundTint="@color/black"/>
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:fontFamily="@font/hel"
+        android:layout_below="@+id/btnSignUp"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        />
+    <TextView
         android:id="@+id/txtLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="login"
         android:layout_below="@+id/btnSignUp"
+        android:fontFamily="@font/hel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5sp"
+        android:layout_marginTop="25sp"
         android:shadowColor="@color/text_shadow"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="3"
+        android:shadowRadius="1"
         />
 
 
