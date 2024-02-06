@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+<<<<<<< HEAD
     android:background="#201d26"
+=======
+    android:background="@color/white"
+>>>>>>> 8a18fb7 (Ui Changes)
 
     >
 
@@ -16,8 +20,13 @@
         android:gravity="center"
         android:layout_marginTop="30sp"
         android:textSize="25sp"
+<<<<<<< HEAD
         android:fontFamily="@font/hel"
         android:textColor="@color/white"
+=======
+        android:typeface="serif"
+        android:textColor="@color/black"
+>>>>>>> 8a18fb7 (Ui Changes)
 
         />
 

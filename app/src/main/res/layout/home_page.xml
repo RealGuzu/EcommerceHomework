@@ -15,7 +15,11 @@
         android:textColor="@color/white"
         android:gravity="center"
         android:textSize="15sp"
+<<<<<<< HEAD
         android:fontFamily="@font/hel"
+=======
+        android:typeface="serif"
+>>>>>>> 8a18fb7 (Ui Changes)
         android:layout_marginTop="15sp"
         />
 
@@ -27,8 +31,14 @@
         android:gravity="center"
         android:textSize="35sp"
         android:textColor="@color/white"
+<<<<<<< HEAD
         android:fontFamily="@font/hel"
         android:layout_marginTop="-20sp"/>
+=======
+        android:typeface="serif"
+        android:layout_marginTop="-12sp"
+        />
+>>>>>>> 8a18fb7 (Ui Changes)
 
     <TextView
         android:layout_width="match_parent"
@@ -37,7 +47,11 @@
         android:layout_above="@+id/btnEnter"
         android:gravity="center"
         android:textColor="@color/white"
+<<<<<<< HEAD
         android:fontFamily="@font/hel"
+=======
+        android:typeface="serif"
+>>>>>>> 8a18fb7 (Ui Changes)
         />
 
     <Button
@@ -48,7 +62,12 @@
         android:backgroundTint="@color/white"
         android:elevation="15dp"
         android:text="@string/btnEnter"
+<<<<<<< HEAD
         android:textColor="@color/black" />
+=======
+        android:textColor="@color/black"
+        android:typeface="serif"/>
+>>>>>>> 8a18fb7 (Ui Changes)
 
     <TextView
         android:id="@+id/txtSignUp"
@@ -59,6 +78,10 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_marginTop="15sp"
+<<<<<<< HEAD
+=======
+        android:typeface="serif"
+>>>>>>> 8a18fb7 (Ui Changes)
         />
 
 </RelativeLayout>

@@ -14,7 +14,11 @@ import androidx.core.content.ContextCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+<<<<<<< HEAD
 public class SignUp extends Activity {
+=======
+public class SignUp extends Activity  {
+>>>>>>> 8a18fb7 (Ui Changes)
 
     private FirebaseAuth auth;
 
@@ -53,6 +57,7 @@ public class SignUp extends Activity {
         return false;
     }
 
+<<<<<<< HEAD
     private void signUpWithEmailAndPassword(String email, String password) {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
@@ -61,10 +66,24 @@ public class SignUp extends Activity {
                         openLogin();
                     } else {
                         showToast("Registration failed: " + task.getException().getMessage());
+=======
+    private void signUpWithEmailAndPassword(String email, String password){
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task ->{
+                    if(task.isSuccessful()) {
+                        showToast("Registration successful");
+                        openLogin();
+                    } else {
+                        showToast("Registration");
+>>>>>>> 8a18fb7 (Ui Changes)
                     }
                 });
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8a18fb7 (Ui Changes)
     private void openLogin() {
         startActivity(new Intent(this, Login.class));
     }
