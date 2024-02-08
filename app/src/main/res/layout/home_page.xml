@@ -16,7 +16,7 @@
         android:gravity="center"
         android:textSize="15sp"
         android:fontFamily="@font/hel"
-        android:layout_marginTop="15sp"
+
         />
 
     <TextView
@@ -27,6 +27,7 @@
         android:gravity="center"
         android:textSize="35sp"
         android:textColor="@color/white"
+
         android:fontFamily="@font/hel"
         android:layout_marginTop="-20sp"/>
 
@@ -37,8 +38,8 @@
         android:layout_above="@+id/btnEnter"
         android:gravity="center"
         android:textColor="@color/white"
-        android:fontFamily="@font/hel"
-        />
+        android:fontFamily="@font/hel"/>
+
 
     <Button
         android:id="@+id/btnEnter"
@@ -48,17 +49,34 @@
         android:backgroundTint="@color/white"
         android:elevation="15dp"
         android:text="@string/btnEnter"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:typeface="serif" />
+
 
     <TextView
         android:id="@+id/txtSignUp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign up"
         android:layout_below="@id/btnEnter"
+        android:layout_marginLeft="130dp"
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_marginTop="15sp"
+        android:typeface="serif"
+        />
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/btnEnter"
+        android:layout_marginLeft="230dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="15sp"
+        android:typeface="serif"
         />
 
 </RelativeLayout>

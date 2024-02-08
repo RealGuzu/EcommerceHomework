@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#201d26"
+    android:background="#201d26">
 
-    >
 
     <TextView
         android:layout_width="match_parent"
@@ -16,10 +15,9 @@
         android:gravity="center"
         android:layout_marginTop="30sp"
         android:textSize="25sp"
-        android:fontFamily="@font/hel"
-        android:textColor="@color/white"
 
-        />
+        android:fontFamily="@font/hel"
+        android:textColor="@color/white"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

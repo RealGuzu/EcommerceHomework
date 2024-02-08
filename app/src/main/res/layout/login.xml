@@ -9,10 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/etxtLogin"
-        android:fontFamily="@font/hel"
         android:gravity="center"
         android:layout_marginTop="25sp"
-        android:textSize="30sp"/>
+        android:textSize="30sp"
+        android:typeface="serif"/>
+
 
     <EditText
 
@@ -23,7 +24,9 @@
         android:autofillHints="Email"
         android:hint="@string/etxtEmail"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:typeface="serif"/>
+
 
     <EditText
         android:id="@+id/etxtPassword"
@@ -35,7 +38,8 @@
         android:autofillHints="password"
         android:hint="@string/logPassword"
         android:minHeight="48dp"
-        android:inputType="textPassword" />
+        android:typeface="serif"/>
+
     
     <Button
         android:id="@+id/btnLogin"
@@ -45,7 +49,7 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:text="Login"
-        android:fontFamily="@font/hel"
+        android:typeface="serif"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"/>
     
