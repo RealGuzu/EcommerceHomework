@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Ecommerce</string>
-    <string name="apparel_desc">Description.</string>
-    <string name="apparel">Category</string>
+    <string name="item_desc">Description.</string>
+    <string name="item_name">Item Name</string>
     <string name="btnEnter">Enter</string>
     <string name="logPassword">Password</string>
     <string name="etxtLogin">Login</string>

@@ -38,10 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/eImage"
-            android:layout_marginStart="70sp"
+
             android:layout_marginTop="10sp"
             android:textSize="23sp"
-            android:text="@string/apparel"/>
+            android:text="@string/item_name"/>
+
+
+
+    
 
         <TextView
             android:id="@+id/txtDesc"
@@ -51,7 +55,7 @@
             android:layout_below="@+id/txtApparel"
             android:layout_marginTop="15dp"
             android:textSize="12sp"
-            android:text="@string/apparel_desc"/>
+            android:text="@string/item_desc"/>
     </RelativeLayout>
 
 
