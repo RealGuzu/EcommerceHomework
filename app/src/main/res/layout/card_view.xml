@@ -12,6 +12,7 @@
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
+    //redo
 
     <RelativeLayout
         android:layout_width="match_parent"
