@@ -7,6 +7,20 @@
     android:background="#201d26">
 
 
+
+
+    <TextView
+        android:id="@+id/txtLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnEnter"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="15sp"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:typeface="serif" />
+
     <TextView
         android:id="@+id/txtWelc"
         android:layout_width="match_parent"
@@ -60,19 +74,6 @@
         android:text="Sign up"
         android:layout_below="@id/btnEnter"
         android:layout_marginLeft="130dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:layout_marginTop="15sp"
-        android:typeface="serif"
-        />
-
-    <TextView
-        android:id="@+id/txtLog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_below="@id/btnEnter"
-        android:layout_marginLeft="230dp"
         android:gravity="center"
         android:textColor="@color/white"
         android:layout_marginTop="15sp"

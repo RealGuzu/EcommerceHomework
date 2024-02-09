@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         List<item> items = new ArrayList<>();
         items.add(new item("Clothing from the top designer brands","Apparel",R.drawable.clothing ));
-        items.add(new item("Latest and Greatest devices from the top tech brands","Electronics",R.drawable.smartphone));
+
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
