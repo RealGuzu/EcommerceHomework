@@ -44,6 +44,13 @@ public class home_page  extends AppCompatActivity {
         Intent intent= new Intent(this, Login.class);
         startActivity(intent);
     }
-
+private class SliderItem {
+        private int image;
+        SliderItem(int image)
+        {
+            this.image = image;
+        }
+        public int getImage(){return image;}
+}
 
 }
