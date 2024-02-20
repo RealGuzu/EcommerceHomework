@@ -3,6 +3,7 @@ package com.example.ecommerce;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
@@ -13,6 +14,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ViewPager2 viewPager2;
 
 
     @Override
@@ -31,7 +33,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new Adapter(getApplicationContext(),items));
 
 
+        List<SliderItems> sliderItems = new ArrayList<>();
+        sliderItems.add (new SliderItems(R.drawable.boots));
+        sliderItems.add (new SliderItems(R.drawable.coat));
+        sliderItems.add (new SliderItems(R.drawable.bro));
 
+
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2));
 
 
     }

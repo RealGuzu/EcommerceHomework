@@ -22,37 +22,26 @@
 
         android:fontFamily="@font/hel"
         android:textColor="@color/white"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/imageSlider"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="25dp"
-        android:layout_below="@id/txtFind"
-        android:layout_marginTop="25dp">
+        android:layout_height="wrap_content"
+        android:paddingStart="80dp"
+        android:paddingEnd="80dp"
+        android:layout_below="@+id/txtFind"
+        android:layout_marginTop="25dp"/>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="80dp"
-            android:paddingEnd="80dp"
-            android:layout_below="@+id/txtWelcome"
-            android:layout_marginTop="25dp"
 
-            />
 
-    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/eREC"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginTop="35dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
         android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/card">
+        android:layout_below="@+id/imageSlider">
 
     </androidx.recyclerview.widget.RecyclerView>
 
