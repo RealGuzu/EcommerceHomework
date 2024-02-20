@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.ecommereceredo.R;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ecommereceredo.R;
+
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<viewHolder> {

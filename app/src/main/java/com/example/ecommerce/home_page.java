@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ecommereceredo.R;
+
 import org.w3c.dom.Text;
 
 public class home_page  extends AppCompatActivity {
